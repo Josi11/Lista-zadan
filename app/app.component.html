@@ -1,0 +1,15 @@
+<div>
+    <div class="container">
+            <div>
+                    <input [(ngModel)]="noweZadanie">
+                    <button (click)="dodaj(zadanie)"> Dodaj zadanie</button>
+                  </div>
+       
+    </div>
+
+    <div class="container">
+        <app-zadania-to-do [listaZadan]="listaZadan" (emitZrobione)="zrobione($event)" (emitUsun)="usun($event)"></app-zadania-to-do>
+        <app-wykonane-zadania [zadaniaZrobione]="zadaniaZrobione" ></app-wykonane-zadania>
+
+    </div>
+</div>
